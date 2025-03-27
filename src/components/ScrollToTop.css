@@ -1,0 +1,49 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50%;
+}
+  
+.scroll-to-top.visible {
+    display: block;
+}
+  
+.scroll-to-top img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    transition: filter 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover img {
+    filter: brightness(0.8);
+}
+
+@media only screen and (max-width: 768px) {
+    .scroll-to-top {
+        right: 10px;
+    }
+
+    .scroll-to-top img {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .scroll-to-top {
+        right: 7.5px;
+    }
+
+    .scroll-to-top img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+}

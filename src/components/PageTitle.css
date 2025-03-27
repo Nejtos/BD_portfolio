@@ -1,0 +1,42 @@
+.page-title{
+    display: flex;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    font-size: 60px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.Kontakt{
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 9;
+    padding-top: 0px;
+    font-size: 34px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+}
+
+@media only screen and (max-width : 768px) {
+    .page-title{
+        font-size: 54px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .page-title{
+        font-size: 26px;
+    }
+}
