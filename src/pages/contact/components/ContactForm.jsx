@@ -4,10 +4,9 @@ import Footer from "../../../components/Footer";
 import PageTitle from "../../../components/PageTitle";
 import { useRef, useState, useCallback } from "react";
 import emailjs from "@emailjs/browser";
-import {
-  GoogleReCaptcha,
-} from "react-google-recaptcha-v3";
+import { GoogleReCaptcha } from "react-google-recaptcha-v3";
 import { Slide, ToastContainer, toast } from "react-toastify";
+import sendIcon from "../../../assets/icons/sendIcon.svg";
 
 const ContactForm = () => {
   const form = useRef();
@@ -158,7 +157,8 @@ const ContactForm = () => {
                       refreshReCaptcha={refreshReCaptcha}
                     />
                     <button className="form-input-submit-btn" type="submit">
-                      Wyślij
+                      <span className="btn-text">Wyślij</span>
+                      <img src={sendIcon} alt="send" className="btn-icon" />
                     </button>
                   </form>
                 </div>

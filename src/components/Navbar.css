@@ -57,6 +57,12 @@
     justify-content: center;
 }
 
+.nav-social-links-icon img{
+    display: flex;
+    width: 32px;
+    height: 32px;
+}
+
 .main-logo {
     position: absolute;
     left: 50%;

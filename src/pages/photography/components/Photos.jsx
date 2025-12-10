@@ -12,22 +12,20 @@ const Photos = () => {
   const type = location.state?.type;
   const [photoIndex, setPhotoIndex] = useState(0);
   const [openModal, setOpenModal] = useState(false);
-  const [selectedSession, setSelectedSession] = useState(null);
-  const [flattenedContent, setFlattenedContent] = useState([]);
+  const slugify = (str) => str.toLowerCase().replace(/\s+/g, "-");
 
-  useEffect(() => {
-    getPhotos().then((data) => {
-      const session = data.find((photo) => photo.title === title);
-      if (session) {
-        setSelectedSession(session);
-        if (session.content.length === 2 && Array.isArray(session.content[0])) {
-          setFlattenedContent([...session.content[0], ...session.content[1]]);
-        } else {
-          setFlattenedContent(session.content);
-        }
-      }
-    });
-  }, [title]);
+  const data = getPhotos();
+  const session = data.find((photo) => slugify(photo.title) === title);
+
+  if (!session) return <p>Brak danych</p>;
+
+  const content =
+    session.content.length === 2 && Array.isArray(session.content[0])
+      ? [...session.content[0], ...session.content[1]]
+      : session.content;
+
+  const [selectedSession] = useState(session);
+  const [flattenedContent] = useState(content);
 
   useEffect(() => {
     if (openModal) {
@@ -144,9 +142,9 @@ const Photos = () => {
         <div className="photography-page-container">
           <div className="container">
             <div className="photography-main-box">
-            {selectedSession.title === "reel"
-              ? renderReels(selectedSession.reels)
-              : null}
+              {selectedSession.title === "reel"
+                ? renderReels(selectedSession.reels)
+                : null}
               {selectedSession.title === "orlovski"
                 ? renderReels(selectedSession.content)
                 : renderPhotos(

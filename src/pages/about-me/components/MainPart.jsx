@@ -4,7 +4,7 @@ import photo1 from "../../../assets/aboutMePhoto.webp";
 import igIcon from "../../../assets/icons/igIcon.webp";
 import fbIcon from "../../../assets/icons/fbIcon.webp";
 import tiktokIcon from "../../../assets/icons/tiktok.webp";
-import vimeoIcon from "../../../assets/icons/vimeoIcon.webp";
+import vimeoIcon from "../../../assets/icons/vimeoIcon2.webp";
 
 const MainPart = () => {
   return (
@@ -14,12 +14,14 @@ const MainPart = () => {
           <div className="about-me-box">
             <div className="about-me-grid">
             <div className="left-section">
+              <div className="image-wrapper">
                 <img
                   id="main-part-img"
                   src={photo1}
                   loading="lazy"
                   alt="Bartłomiej Dąbrowski image"
                 />
+                </div>
               </div>
               <div className="right-section">
                 <div className="section-title">Bartłomiej Dąbrowski</div>

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import igIcon from "../assets/icons/igIcon2.webp";
 import vimeoIcon from "../assets/icons/vimeoIcon.webp";
-import tiktokIcon from "../assets/icons/tiktokIcon3.webp";
+import tiktokIcon from "../assets/icons/tiktokIcon2.webp";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -51,7 +51,7 @@ const Navbar = () => {
             className="nav-link"
             onClick={() => {
               window.open(
-                "https://www.instagram.com/bdabrowski_dop/",
+                "https://www.instagram.com/bartek_dabrowskii/",
                 "_blank"
               );
             }}
@@ -132,7 +132,7 @@ const Navbar = () => {
                 alt="Tiktok icon"
                 onClick={() => {
                   window.open(
-                    "https://www.tiktok.com/@bartekdabrowskii",
+                    "https://www.tiktok.com/@bartek_dabrowskii",
                     "_blank"
                   );
                 }}
